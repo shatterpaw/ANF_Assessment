@@ -18,6 +18,7 @@
 		5A987874387BD45D1EBE15D2 /* Pods_ANF_Code_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6415838912F66514AEE6354 /* Pods_ANF_Code_TestTests.framework */; };
 		83A2635D2971E985007A8642 /* PromoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2635C2971E985007A8642 /* PromoCardView.swift */; };
 		83A2635F2971F6F4007A8642 /* ContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2635E2971F6F4007A8642 /* ContentItem.swift */; };
+		83A263612971FB7D007A8642 /* PromoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A263602971FB7D007A8642 /* PromoItem.swift */; };
 		A6D77DEC3F51E7C57C53DE02 /* Pods_ANF_Code_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DC856AA9D5724ED1668CB5 /* Pods_ANF_Code_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		6200B9C78237D0A5045E7747 /* Pods-ANF Code TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANF Code TestTests.debug.xcconfig"; path = "Target Support Files/Pods-ANF Code TestTests/Pods-ANF Code TestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		83A2635C2971E985007A8642 /* PromoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardView.swift; sourceTree = "<group>"; };
 		83A2635E2971F6F4007A8642 /* ContentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentItem.swift; sourceTree = "<group>"; };
+		83A263602971FB7D007A8642 /* PromoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoItem.swift; sourceTree = "<group>"; };
 		85DC856AA9D5724ED1668CB5 /* Pods_ANF_Code_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANF_Code_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6415838912F66514AEE6354 /* Pods_ANF_Code_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANF_Code_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				3E4AB9392676D86100C79456 /* exploreData.json */,
 				83A2635C2971E985007A8642 /* PromoCardView.swift */,
 				83A2635E2971F6F4007A8642 /* ContentItem.swift */,
+				83A263602971FB7D007A8642 /* PromoItem.swift */,
 			);
 			path = "ANF Code Test";
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A263612971FB7D007A8642 /* PromoItem.swift in Sources */,
 				83A2635D2971E985007A8642 /* PromoCardView.swift in Sources */,
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
 				83A2635F2971F6F4007A8642 /* ContentItem.swift in Sources */,
