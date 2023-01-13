@@ -8,54 +8,48 @@
 import SwiftUI
 
 struct PromoCardView: View {
-    @State var imageName: String? = "anf-US-20160518-app-men-tees"
-    @State var topDescription: String? = "A & F Essentials"
-    @State var title: String? = "Tops Starting at $12"
-    @State var promoMessage: String? = "Use Code: 12345"
-    @State var bottomDescription: String? = "*In stores & online. "
-    @State var bottomDescriptionUnderlined: String? = "Exclusions apply. See Details"
-    @State var content: [ContentItem] = [
-        ContentItem(elementType: nil, target: "", title: "Shop Men"),
-        ContentItem(elementType: nil, target: "", title: "Shop Women")
-    ]
+    @State var promoItem: PromoItem
     
     var body: some View {
         VStack(spacing: 10) {
-            if let imageName {
+            if let imageName = promoItem.backgroundImageName {
                 Image(imageName)
                     .resizable()
                     .scaledToFit()
             }
             
-            if let topDescription {
+            if let topDescription = promoItem.topDescription {
                 Text(topDescription)
                     .textCase(.uppercase)
             }
             
-            if let title {
+            if let title = promoItem.title {
                 Text(title)
                     .font(.system(size: 17, weight: .bold))
                     .textCase(.uppercase)
             }
             
-            if let promoMessage {
+            if let promoMessage = promoItem.promoMessage {
                 Text(promoMessage)
                     .font(.system(size: 11))
             }
             
-            if ![bottomDescription, bottomDescriptionUnderlined].compactMap({ $0 }).isEmpty {
-                HStack(spacing: 0) {
-                    if let bottomDescription {
-                        Text(bottomDescription)
-                    }
-                    if let bottomDescriptionUnderlined {
-                        Text(bottomDescriptionUnderlined)
-                            .underline()
-                    }
-                }
+//            if ![bottomDescription, bottomDescriptionUnderlined].compactMap({ $0 }).isEmpty {
+//                HStack(spacing: 0) {
+//                    if let bottomDescription {
+//                        Text(bottomDescription)
+//                    }
+//                    if let bottomDescriptionUnderlined {
+//                        Text(bottomDescriptionUnderlined)
+//                            .underline()
+//                    }
+//                }
+//            }
+            if let bottomDescription = promoItem.bottomDescription {
+                Text(bottomDescription)
             }
             
-            ForEach(content, id: \.self) { item in
+            ForEach(promoItem.content ?? [], id: \.self) { item in
                 Button {
                     
                 } label: {
@@ -74,7 +68,18 @@ struct PromoCardView: View {
 }
 
 struct PromoCardView_Previews: PreviewProvider {
+    static var promoItem: PromoItem {
+        PromoItem(title: "Tops Starting at $12",
+                  backgroundImageName: "anf-US-20160518-app-men-tees",
+                  promoMessage: "Use Code: 12345",
+                  topDescription: "A & F Essentials",
+                  bottomDescription: "*In stores & online. Exclusions apply. See Details",
+                  content: [
+                    ContentItem(elementType: nil, target: "", title: "Shop Men"),
+                    ContentItem(elementType: nil, target: "", title: "Shop Women")
+                  ])
+    }
     static var previews: some View {
-        PromoCardView()
+        PromoCardView(promoItem: promoItem)
     }
 }

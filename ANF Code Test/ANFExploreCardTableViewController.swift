@@ -50,7 +50,8 @@ class ANFExploreCardTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let promoCardView = PromoCardView()
+        guard let promoItem = exploreData?[indexPath.row] else { return }
+        let promoCardView = PromoCardView(promoItem: promoItem)
         let hostController = UIHostingController(rootView: promoCardView)
         navigationController?.pushViewController(hostController, animated: true)
     }
