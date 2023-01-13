@@ -122,7 +122,6 @@
 				6200B9C78237D0A5045E7747 /* Pods-ANF Code TestTests.debug.xcconfig */,
 				4915E3E0DEAD8794E3B8310E /* Pods-ANF Code TestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -457,10 +456,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RAHE33U4ZS;
 				INFOPLIST_FILE = "ANF Code Test/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ANF Code Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abercrombie.ANF-Code-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -479,10 +482,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RAHE33U4ZS;
 				INFOPLIST_FILE = "ANF Code Test/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ANF Code Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abercrombie.ANF-Code-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -500,7 +507,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ANF Code TestTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,7 +530,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ANF Code TestTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
