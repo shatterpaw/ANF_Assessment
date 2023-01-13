@@ -19,6 +19,7 @@
 		83A2635D2971E985007A8642 /* PromoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2635C2971E985007A8642 /* PromoCardView.swift */; };
 		83A2635F2971F6F4007A8642 /* ContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2635E2971F6F4007A8642 /* ContentItem.swift */; };
 		83A263612971FB7D007A8642 /* PromoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A263602971FB7D007A8642 /* PromoItem.swift */; };
+		83A26363297207D7007A8642 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A26362297207D7007A8642 /* String+Utils.swift */; };
 		A6D77DEC3F51E7C57C53DE02 /* Pods_ANF_Code_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DC856AA9D5724ED1668CB5 /* Pods_ANF_Code_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		83A2635C2971E985007A8642 /* PromoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardView.swift; sourceTree = "<group>"; };
 		83A2635E2971F6F4007A8642 /* ContentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentItem.swift; sourceTree = "<group>"; };
 		83A263602971FB7D007A8642 /* PromoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoItem.swift; sourceTree = "<group>"; };
+		83A26362297207D7007A8642 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		85DC856AA9D5724ED1668CB5 /* Pods_ANF_Code_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANF_Code_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6415838912F66514AEE6354 /* Pods_ANF_Code_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANF_Code_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				83A2635C2971E985007A8642 /* PromoCardView.swift */,
 				83A2635E2971F6F4007A8642 /* ContentItem.swift */,
 				83A263602971FB7D007A8642 /* PromoItem.swift */,
+				83A26362297207D7007A8642 /* String+Utils.swift */,
 			);
 			path = "ANF Code Test";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
 				83A2635F2971F6F4007A8642 /* ContentItem.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
+				83A26363297207D7007A8642 /* String+Utils.swift in Sources */,
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

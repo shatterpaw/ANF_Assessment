@@ -8,14 +8,6 @@ import SwiftUI
 
 class ANFExploreCardTableViewController: UITableViewController {
 
-//    private var exploreData: [[AnyHashable: Any]]? {
-//        if let filePath = Bundle.main.path(forResource: "exploreData", ofType: "json"),
-//         let fileContent = try? Data(contentsOf: URL(fileURLWithPath: filePath)),
-//         let jsonDictionary = try? JSONSerialization.jsonObject(with: fileContent, options: .mutableContainers) as? [[AnyHashable: Any]] {
-//            return jsonDictionary
-//        }
-//        return nil
-//    }
     private var exploreData: [PromoItem]? {
         if let filePath = Bundle.main.path(forResource: "exploreData", ofType: "json"),
            let fileContent = try? Data(contentsOf: URL(fileURLWithPath: filePath)),

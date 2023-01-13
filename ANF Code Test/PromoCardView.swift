@@ -12,7 +12,7 @@ struct PromoCardView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            if let imageName = promoItem.backgroundImageName {
+            if let imageName = promoItem.backgroundImageName?.stripFileExtension() {
                 Image(imageName)
                     .resizable()
                     .scaledToFit()
@@ -34,18 +34,10 @@ struct PromoCardView: View {
                     .font(.system(size: 11))
             }
             
-//            if ![bottomDescription, bottomDescriptionUnderlined].compactMap({ $0 }).isEmpty {
-//                HStack(spacing: 0) {
-//                    if let bottomDescription {
-//                        Text(bottomDescription)
-//                    }
-//                    if let bottomDescriptionUnderlined {
-//                        Text(bottomDescriptionUnderlined)
-//                            .underline()
-//                    }
-//                }
-//            }
-            if let bottomDescription = promoItem.bottomDescription {
+            /*
+             For this assessment, html links are not followed
+             */
+            if let bottomDescription = try? promoItem.bottomDescription?.htmlToAttributedString(font: .systemFont(ofSize: 13)) {
                 Text(bottomDescription)
             }
             
@@ -60,6 +52,7 @@ struct PromoCardView: View {
                 }
                 .buttonStyle(.plain)
                 .border(.gray)
+                .padding([.leading, .trailing])
             }
         }
         .font(.system(size: 13))
