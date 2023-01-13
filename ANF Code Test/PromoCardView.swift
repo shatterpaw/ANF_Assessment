@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct PromoCardView: View {
-    @State var imageName: String = "anf-US-20160518-app-men-tees"
-    @State var topDescription: String = "A & F Essentials"
-    @State var title: String = "Tops Starting at $12"
-    @State var promoMessage: String = "Use Code: 12345"
-    @State var bottomDescription: String = "*In stores & online. "
-    @State var bottomDescriptionUnderlined: String = "Exclusions apply. See Details"
+    @State var imageName: String? = "anf-US-20160518-app-men-tees"
+    @State var topDescription: String? = "A & F Essentials"
+    @State var title: String? = "Tops Starting at $12"
+    @State var promoMessage: String? = "Use Code: 12345"
+    @State var bottomDescription: String? = "*In stores & online. "
+    @State var bottomDescriptionUnderlined: String? = "Exclusions apply. See Details"
     @State var content: [ContentItem] = [
         ContentItem(elementType: nil, target: "", title: "Shop Men"),
         ContentItem(elementType: nil, target: "", title: "Shop Women")
@@ -21,24 +21,38 @@ struct PromoCardView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
+            if let imageName {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFit()
+            }
             
-            Text(topDescription)
-                .textCase(.uppercase)
+            if let topDescription {
+                Text(topDescription)
+                    .textCase(.uppercase)
+            }
             
-            Text(title)
-                .font(.system(size: 17, weight: .bold))
-                .textCase(.uppercase)
+            if let title {
+                Text(title)
+                    .font(.system(size: 17, weight: .bold))
+                    .textCase(.uppercase)
+            }
             
-            Text(promoMessage)
-                .font(.system(size: 11))
+            if let promoMessage {
+                Text(promoMessage)
+                    .font(.system(size: 11))
+            }
             
-            HStack(spacing: 0) {
-                Text(bottomDescription)
-                Text(bottomDescriptionUnderlined)
-                    .underline()
+            if ![bottomDescription, bottomDescriptionUnderlined].compactMap({ $0 }).isEmpty {
+                HStack(spacing: 0) {
+                    if let bottomDescription {
+                        Text(bottomDescription)
+                    }
+                    if let bottomDescriptionUnderlined {
+                        Text(bottomDescriptionUnderlined)
+                            .underline()
+                    }
+                }
             }
             
             ForEach(content, id: \.self) { item in
