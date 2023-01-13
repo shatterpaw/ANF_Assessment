@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ANFExploreCardTableViewController: UITableViewController {
 
@@ -34,5 +35,11 @@ class ANFExploreCardTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let promoCardView = PromoCardView()
+        let hostController = UIHostingController(rootView: promoCardView)
+        navigationController?.pushViewController(hostController, animated: true)
     }
 }

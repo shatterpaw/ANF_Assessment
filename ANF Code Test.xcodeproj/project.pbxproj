@@ -16,6 +16,7 @@
 		3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */; };
 		3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */; };
 		5A987874387BD45D1EBE15D2 /* Pods_ANF_Code_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6415838912F66514AEE6354 /* Pods_ANF_Code_TestTests.framework */; };
+		83A2635D2971E985007A8642 /* PromoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2635C2971E985007A8642 /* PromoCardView.swift */; };
 		A6D77DEC3F51E7C57C53DE02 /* Pods_ANF_Code_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DC856AA9D5724ED1668CB5 /* Pods_ANF_Code_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewController.swift; sourceTree = "<group>"; };
 		4915E3E0DEAD8794E3B8310E /* Pods-ANF Code TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANF Code TestTests.release.xcconfig"; path = "Target Support Files/Pods-ANF Code TestTests/Pods-ANF Code TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		6200B9C78237D0A5045E7747 /* Pods-ANF Code TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANF Code TestTests.debug.xcconfig"; path = "Target Support Files/Pods-ANF Code TestTests/Pods-ANF Code TestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		83A2635C2971E985007A8642 /* PromoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCardView.swift; sourceTree = "<group>"; };
 		85DC856AA9D5724ED1668CB5 /* Pods_ANF_Code_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANF_Code_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6415838912F66514AEE6354 /* Pods_ANF_Code_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANF_Code_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */,
 				3E727EE02672708B006C11AC /* Info.plist */,
 				3E4AB9392676D86100C79456 /* exploreData.json */,
+				83A2635C2971E985007A8642 /* PromoCardView.swift */,
 			);
 			path = "ANF Code Test";
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A2635D2971E985007A8642 /* PromoCardView.swift in Sources */,
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
