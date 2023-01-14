@@ -35,11 +35,11 @@ class ANFExploreCardTableViewController: UITableViewController, DataUpdateDelega
             titleLabel.text = item.title
         }
         
-        if let imageView = cell.viewWithTag(2) as? UIImageView,
-           let name = item.backgroundImageName,
-           let image = UIImage(named: name) {
-            imageView.image = image
-        }
+//        if let imageView = cell.viewWithTag(2) as? UIImageView,
+//           let name = item.backgroundImageName,
+//           let image = UIImage(named: name) {
+//            imageView.image = image
+//        }
         
         return cell
     }

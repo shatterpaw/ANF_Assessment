@@ -13,7 +13,17 @@ struct PromoCardView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            if let imageName = promoItem.backgroundImageName?.stripFileExtension() {
+            if let imageName = promoItem.backgroundImageName,
+                imageName.hasPrefix("http"),
+                let url = URL(string: imageName) {
+                AsyncImage(url: url) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                } placeholder: {
+                    ProgressView()
+                }   
+            } else if let imageName = promoItem.backgroundImageName?.stripFileExtension() {
                 Image(imageName)
                     .resizable()
                     .scaledToFit()
