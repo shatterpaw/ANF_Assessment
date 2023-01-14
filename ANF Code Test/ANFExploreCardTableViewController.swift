@@ -35,11 +35,16 @@ class ANFExploreCardTableViewController: UITableViewController, DataUpdateDelega
             titleLabel.text = item.title
         }
         
-//        if let imageView = cell.viewWithTag(2) as? UIImageView,
-//           let name = item.backgroundImageName,
-//           let image = UIImage(named: name) {
-//            imageView.image = image
-//        }
+        if let imageView = cell.viewWithTag(2) as? UIImageView, let imageName = item.backgroundImageName {
+            if imageName.hasPrefix("http"), let url = URL(string: imageName) {
+                viewModel.loadImage(url: url) { image in
+                    imageView.image = image
+                }
+            } else {
+                let image = UIImage(named: imageName)
+                imageView.image = image
+            }
+        }
         
         return cell
     }
@@ -66,12 +71,24 @@ extension ANFExploreCardTableViewController {
         }
         
         func loadData(useLocal: Bool = false) {
+            if exploreData != nil { return }
             if useLocal {
                 loadLocalData()
                 return
             }
             Task {
                 try? await loadCloudData()
+            }
+        }
+        
+        func loadImage(url: URL, _ closure: @escaping (UIImage?) -> Void) {
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url) {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        closure(image)
+                    }
+                }
             }
         }
         
@@ -84,7 +101,6 @@ extension ANFExploreCardTableViewController {
         }
         
         private func loadCloudData() async throws {
-            print("Loading cloud data")
             guard let url = URL(string: "https://www.abercrombie.com/anf/nativeapp/qa/codetest/codeTest_exploreData.json") else {
                 fatalError("Invalid URL")
             }
