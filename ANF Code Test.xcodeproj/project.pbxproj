@@ -23,6 +23,7 @@
 		83A2636529723E57007A8642 /* String+UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2636429723E57007A8642 /* String+UtilsTests.swift */; };
 		83A263672973269F007A8642 /* ANFExploreCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A263662973269F007A8642 /* ANFExploreCardViewModelTests.swift */; };
 		83A2636E29734AEF007A8642 /* ANFExploreCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2636D29734AEF007A8642 /* ANFExploreCardViewModel.swift */; };
+		83A2637629734D3E007A8642 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 83A2637529734D3D007A8642 /* README.md */; };
 		A6D77DEC3F51E7C57C53DE02 /* Pods_ANF_Code_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DC856AA9D5724ED1668CB5 /* Pods_ANF_Code_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		83A2636429723E57007A8642 /* String+UtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UtilsTests.swift"; sourceTree = "<group>"; };
 		83A263662973269F007A8642 /* ANFExploreCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardViewModelTests.swift; sourceTree = "<group>"; };
 		83A2636D29734AEF007A8642 /* ANFExploreCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardViewModel.swift; sourceTree = "<group>"; };
+		83A2637529734D3D007A8642 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		85DC856AA9D5724ED1668CB5 /* Pods_ANF_Code_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANF_Code_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6415838912F66514AEE6354 /* Pods_ANF_Code_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANF_Code_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 		3E727EC626727088006C11AC = {
 			isa = PBXGroup;
 			children = (
+				83A2637529734D3D007A8642 /* README.md */,
 				3E727ED126727088006C11AC /* ANF Code Test */,
 				3E727EE82672708B006C11AC /* ANF Code TestTests */,
 				3E727ED026727088006C11AC /* Products */,
@@ -287,6 +290,7 @@
 			files = (
 				3E727EDF2672708B006C11AC /* LaunchScreen.storyboard in Resources */,
 				3E727EDC2672708B006C11AC /* Assets.xcassets in Resources */,
+				83A2637629734D3E007A8642 /* README.md in Resources */,
 				3E727EDA26727088006C11AC /* Main.storyboard in Resources */,
 				3E4AB93A2676D86100C79456 /* exploreData.json in Resources */,
 			);
