@@ -16,6 +16,7 @@ class ANFExploreCardTableViewControllerTests: XCTestCase {
         let navigationController = try XCTUnwrap(UIStoryboard(name: "Main", bundle: Bundle.main)
             .instantiateInitialViewController() as? UINavigationController)
         testInstance = try XCTUnwrap(navigationController.viewControllers.first as? ANFExploreCardTableViewController)
+        testInstance.viewModel.loadData(useLocal: true)
     }
     
     override func tearDownWithError() throws {

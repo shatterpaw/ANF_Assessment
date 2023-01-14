@@ -8,7 +8,7 @@
 import UIKit
 
 extension String {
-    func stripFileExtension() -> String {
+    public func stripFileExtension() -> String {
         let components = self.components(separatedBy: ".")
         guard components.count > 1 else { return self }
         return components.dropLast(1).joined(separator: ".")
@@ -18,7 +18,7 @@ extension String {
 extension StringProtocol {
     // modified from https://stackoverflow.com/a/70828186
     @MainActor
-    func htmlToAttributedString(font: UIFont) throws -> AttributedString {
+    public func htmlToAttributedString(font: UIFont) throws -> AttributedString {
         let parsed = try NSAttributedString(data: .init(utf8),
                                             options: [
                                                 .documentType: NSAttributedString.DocumentType.html,
