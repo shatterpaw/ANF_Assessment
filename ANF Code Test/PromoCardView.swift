@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PromoCardView: View {
     @State var promoItem: PromoItem
+    @State var alertIsPresented: Bool = false
     
     var body: some View {
         VStack(spacing: 10) {
@@ -41,9 +42,13 @@ struct PromoCardView: View {
                 Text(bottomDescription)
             }
             
+            /*
+             For this assessment an alert is displayed upon button click displaying the
+             target.
+             */
             ForEach(promoItem.content ?? [], id: \.self) { item in
                 Button {
-                    
+                    alertIsPresented = true
                 } label: {
                     Text(item.title)
                         .padding()
@@ -53,6 +58,11 @@ struct PromoCardView: View {
                 .buttonStyle(.plain)
                 .border(.gray)
                 .padding([.leading, .trailing])
+                .alert("Not Navigating To", isPresented: $alertIsPresented) {
+                    
+                } message: {
+                    Text(item.target)
+                }
             }
         }
         .font(.system(size: 13))
