@@ -11,8 +11,16 @@ class ANFExploreCardTableViewControllerTests: XCTestCase {
 
     var testInstance: ANFExploreCardTableViewController!
     
-    override func setUp() {
-        testInstance = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? ANFExploreCardTableViewController
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+        let navigationController = try XCTUnwrap(UIStoryboard(name: "Main", bundle: Bundle.main)
+            .instantiateInitialViewController() as? UINavigationController)
+        testInstance = try XCTUnwrap(navigationController.viewControllers.first as? ANFExploreCardTableViewController)
+    }
+    
+    override func tearDownWithError() throws {
+        testInstance = nil
+        try super.tearDownWithError()
     }
 
     func test_numberOfSections_ShouldBeOne() {
